@@ -1,0 +1,14 @@
+<svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main eye shape -->
+  <ellipse cx="80" cy="60" rx="40" ry="40" fill="#2563eb"/>
+  
+  <!-- Pupil with friendly curve -->
+  <circle cx="80" cy="60" r="20" fill="white"/>
+  <path d="M70 60 Q80 70 90 60" stroke="#2563eb" stroke-width="4" fill="none"/>
+  
+  <!-- Magnifying glass handle as growth arrow -->
+  <path d="M110 80 L130 100" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Optional shimmer/highlight -->
+  <circle cx="65" cy="45" r="8" fill="white" opacity="0.6"/>
+</svg>

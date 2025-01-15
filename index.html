@@ -541,6 +541,102 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .database-counter {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 1rem 1.5rem;
+            background: rgba(17, 24, 39, 0.6);
+            border-radius: 1rem;
+            box-shadow: 
+                0 0 0 1px rgba(96, 165, 250, 0.1),
+                0 8px 20px -8px rgba(96, 165, 250, 0.25);
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+            transition: all 0.3s ease;
+        }
+
+        .database-counter::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 1rem;
+            padding: 1px;
+            background: linear-gradient(
+                135deg,
+                rgba(96, 165, 250, 0.5),
+                rgba(139, 92, 246, 0.5)
+            );
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            mask: 
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .counter-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, 
+                #60A5FA,
+                #8B5CF6
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+            position: relative;
+        }
+
+        .counter-number::after {
+            content: '+';
+            position: absolute;
+            top: 0;
+            right: -1.5rem;
+            font-size: 2.5rem;
+            background: inherit;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .counter-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--gray-300);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 1px solid rgba(96, 165, 250, 0.2);
+        }
+
+        .database-counter:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 
+                0 0 0 1px rgba(96, 165, 250, 0.2),
+                0 12px 24px -12px rgba(96, 165, 250, 0.3);
+        }
+
+        @media (max-width: 640px) {
+            .database-counter {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+            }
+
+            .counter-label {
+                padding-left: 0;
+                border-left: none;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -559,18 +655,11 @@
                 <h1>Smart Marketing Database<br>for Busy Founders</h1>
                 <p class="subtitle">
                     Effortlessly boost your rankings, save precious time.<br>
-                    Your path to <span class="highlight">greater visibility</span> starts here.
+                    <!--Your path to <span class="highlight">greater visibility</span> starts here.-->
                 </p>
-                <div class="options">
-                    <p class="choice-text">Join the waitlist for exclusive early-bird benefits:</p>
-                    <div class="path-autopilot">
-                        <span class="badge">🚀 Autopilot Submissions</span>
-                        <p class="path-description">We handle directory submissions for you, while you focus on building.</p>
-                    </div>
-                    <div class="path-diy">
-                        <span class="badge">📊 Direct Database Access</span>
-                        <p class="path-description">Instant access to our curated marketing database. Submit at your own pace.</p>
-                    </div>
+                <div class="database-counter">
+                    <span class="counter-number">500</span>
+                    <span class="counter-label">Marketing Opportunities</span>
                 </div>
 
                 <div class="waitlist-container">
@@ -583,21 +672,33 @@
                     <p class="powered-by">Powered by <a href="https://waitlistpal.com" target="_blank">WaitlistPal.com</a></p>
                 </div>
 
+                <div class="options">
+                    <p class="choice-text">Join the waitlist for exclusive benefits & lower prices.</p>
+                    <div class="path-autopilot">
+                        <span class="badge">🚀 Autopilot Submissions</span>
+                        <p class="path-description">We handle directory submissions for you, while you focus on building.</p>
+                    </div>
+                    <div class="path-diy">
+                        <span class="badge">📊 Direct Database Access</span>
+                        <p class="path-description">Instant access to our curated marketing database. Submit at your own pace.</p>
+                    </div>
+                </div>
+
                 <div class="value-props">
                     <div class="value-prop">
                         <i class="fas fa-chart-line"></i>
                         <h3>High DA Backlinks</h3>
-                        <p>Quality backlinks from high domain authority directories</p>
+                        <p>Quality backlinks from high domain authority directories.</p>
                     </div>
                     <div class="value-prop">
                         <i class="fas fa-users"></i>
                         <h3>More Traffic</h3>
-                        <p>Reach more monthly visitors through improved rankings and SEO</p>
+                        <p>Reach more monthly visitors through improved rankings and SEO.</p>
                     </div>
                     <div class="value-prop">
                         <i class="fas fa-rocket"></i>
                         <h3>Quick Results</h3>
-                        <p>Start seeing results within 30 days of submission</p>
+                        <p>Start seeing results within 30 days of submission.</p>
                     </div>
                 </div>
 
